@@ -12,6 +12,7 @@ args = parser.parse_args()
 men = ['Anthony', 'Clinton', 'Dimitri', 'Ethan', 'Joe', 'Kareem', 'Keith', 'Malcolm', 'Michael', 'Shad', 'Tyler']
 women = ['Alexis', 'Alivia', 'Audrey', 'Diandra', 'Geles', 'Jada', 'Keyana', 'Nicole', 'Nurys', 'Uche', 'Zoe']
 
+# Match Ceremonies
 mcs = [
   { 'order': ['Geles', 'Uche', 'Diandra', 'Jada', 'Zoe', 'Alivia', 'Alexis', 'Nurys', 'Keyana', 'Audrey', 'Nicole'], 'beams': 3 },
   { 'order': ['Diandra', 'Uche', 'Nicole', 'Jada', 'Audrey', 'Alivia', 'Alexis', 'Nurys', 'Keyana', 'Geles', 'Zoe'], 'beams': 1 },
@@ -21,6 +22,7 @@ mcs = [
   { 'order': ['Keyana', 'Geles', 'Diandra', 'Jada', 'Alexis', 'Nurys', 'Zoe', 'Alivia', 'Uche', 'Audrey', 'Nicole'], 'beams': 4 }
 ]
 
+# Truth Booths
 truths = [
   { 'man': 'Ethan', 'woman': 'Keyana', 'value': False },
   { 'man': 'Anthony', 'woman': 'Geles', 'value': False },
@@ -72,6 +74,11 @@ if args.save_snapshot:
 print('Total Possibilities: %s' % p_length)
 print('Remaining Possibilities: %s' % len(remaining))
 
-for pair in pairs_odds:
-    m = pairs_odds[pair]
-    print(pair, [(round(m[p] / len(remaining) * 100, 2), p) for p in m])
+# max output length
+mol = len(max(men + women, key=len))
+def output (odds):
+    return str(round(odds / len(remaining) * 100, 2)).rjust(mol, ' ')
+
+print('  '.join([''.rjust(mol, ' ')] + [man.rjust(mol, ' ') for man in men]))
+for woman in women:
+    print('  '.join([woman.rjust(mol, ' ')] + [output(pairs_odds[woman][man]) for man in men]))
