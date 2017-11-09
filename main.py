@@ -30,7 +30,8 @@ truths = [
   { 'man': 'Malcolm', 'woman': 'Nurys', 'value': False },
   { 'man': 'Dimitri', 'woman': 'Nicole', 'value': False },
   { 'man': 'Clinton', 'woman': 'Uche', 'value': False },
-  { 'man': 'Keith', 'woman': 'Alexis', 'value': False }
+  { 'man': 'Keith', 'woman': 'Alexis', 'value': False },
+  { 'man': 'Keith', 'woman': 'Alivia', 'value': False }
 ]
 
 def beams (attempt, correct):
@@ -69,6 +70,7 @@ for p in possibilities:
             pairs_odds[p[index]][man] += 1
     count += 1
 
+print('')
 if args.save_snapshot:
     pickle.dump(remaining, open(args.save_snapshot, 'wb'))
 
