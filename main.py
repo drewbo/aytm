@@ -84,8 +84,10 @@ def output (odds):
     return colored(str(round(num, 2)).rjust(mol, ' '), get_color(num))
 
 def get_color(num):
-    if num < 10:
+    if num == 0:
         return 'red'
+    if num < 10:
+        return 'white'
     if num < 30:
         return 'yellow'
     return 'green'
