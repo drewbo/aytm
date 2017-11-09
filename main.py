@@ -3,6 +3,7 @@ import math
 import sys
 import pickle
 import argparse
+from termcolor import colored
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--use-snapshot', type=str, help='snapshot file input', default=None)
@@ -77,7 +78,15 @@ print('Remaining Possibilities: %s' % len(remaining))
 # max output length
 mol = len(max(men + women, key=len))
 def output (odds):
-    return str(round(odds / len(remaining) * 100, 2)).rjust(mol, ' ')
+    num = odds / len(remaining) * 100
+    return colored(str(round(num, 2)).rjust(mol, ' '), get_color(num))
+
+def get_color(num):
+    if num < 10:
+        return 'red'
+    if num < 30:
+        return 'yellow'
+    return 'green'
 
 print('  '.join([''.rjust(mol, ' ')] + [man.rjust(mol, ' ') for man in men]))
 for woman in women:
