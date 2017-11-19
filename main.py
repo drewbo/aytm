@@ -20,7 +20,8 @@ mcs = [
   { 'order': ['Jada', 'Uche', 'Nurys', 'Alexis', 'Zoe', 'Alivia', 'Diandra', 'Geles', 'Audrey', 'Keyana', 'Nicole'], 'beams': 2 },
   { 'order': ['Keyana', 'Uche', 'Alexis', 'Nicole', 'Zoe', 'Diandra', 'Nurys', 'Alivia', 'Geles', 'Audrey', 'Jada'], 'beams': 3 },
   { 'order': ['Nicole', 'Jada', 'Uche', 'Geles', 'Zoe', 'Alivia', 'Alexis', 'Diandra', 'Nurys', 'Audrey', 'Keyana'], 'beams': 1 },
-  { 'order': ['Keyana', 'Geles', 'Diandra', 'Jada', 'Alexis', 'Nurys', 'Zoe', 'Alivia', 'Uche', 'Audrey', 'Nicole'], 'beams': 4 }
+  { 'order': ['Keyana', 'Geles', 'Diandra', 'Jada', 'Alexis', 'Nurys', 'Zoe', 'Alivia', 'Uche', 'Audrey', 'Nicole'], 'beams': 4 },
+  { 'order': ['Keyana', 'Geles', 'Diandra', 'Zoe', 'Uche', 'Nurys', 'Jada', 'Alexis', 'Audrey', 'Alivia', 'Nicole'], 'beams': 5 }
 ]
 
 # Truth Booths
