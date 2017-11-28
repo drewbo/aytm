@@ -21,7 +21,8 @@ mcs = [
   { 'order': ['Keyana', 'Uche', 'Alexis', 'Nicole', 'Zoe', 'Diandra', 'Nurys', 'Alivia', 'Geles', 'Audrey', 'Jada'], 'beams': 3 },
   { 'order': ['Nicole', 'Jada', 'Uche', 'Geles', 'Zoe', 'Alivia', 'Alexis', 'Diandra', 'Nurys', 'Audrey', 'Keyana'], 'beams': 1 },
   { 'order': ['Keyana', 'Geles', 'Diandra', 'Jada', 'Alexis', 'Nurys', 'Zoe', 'Alivia', 'Uche', 'Audrey', 'Nicole'], 'beams': 4 },
-  { 'order': ['Keyana', 'Geles', 'Diandra', 'Zoe', 'Uche', 'Nurys', 'Jada', 'Alexis', 'Audrey', 'Alivia', 'Nicole'], 'beams': 5 }
+  { 'order': ['Keyana', 'Geles', 'Diandra', 'Zoe', 'Uche', 'Nurys', 'Jada', 'Alexis', 'Audrey', 'Alivia', 'Nicole'], 'beams': 5 },
+  { 'order': ['Alivia', 'Geles', 'Diandra', 'Alexis', 'Jada', 'Nurys', 'Audrey', 'Uche', 'Keyana', 'Zoe', 'Nicole'], 'beams': 3 }
 ]
 
 # Truth Booths
@@ -32,7 +33,8 @@ truths = [
   { 'man': 'Dimitri', 'woman': 'Nicole', 'value': False },
   { 'man': 'Clinton', 'woman': 'Uche', 'value': False },
   { 'man': 'Keith', 'woman': 'Alexis', 'value': False },
-  { 'man': 'Keith', 'woman': 'Alivia', 'value': False }
+  { 'man': 'Keith', 'woman': 'Alivia', 'value': False },
+  { 'man': 'Michael', 'woman': 'Audrey', 'value': False }
 ]
 
 def beams (attempt, correct):
